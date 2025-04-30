@@ -1,4 +1,6 @@
-# requirements.txt
+# Brug PyTorch nightly builds med CUDA 12.1 (f.eks. til RTX 5090)
+--extra-index-url https://download.pytorch.org/whl/nightly/cu121
+--pre
 
 # Core Web Framework
 fastapi
@@ -8,7 +10,7 @@ uvicorn[standard]
 torch
 torchaudio
 numpy
-soundfile # Requires libsndfile system library (e.g., sudo apt-get install libsndfile1 on Debian/Ubuntu)
+soundfile    # Requires libsndfile system library (e.g., sudo apt-get install libsndfile1 on Debian/Ubuntu)
 huggingface_hub
 descript-audio-codec
 safetensors
@@ -16,11 +18,11 @@ openai-whisper
 
 # Configuration & Utilities
 pydantic
-python-dotenv # Used ONLY for initial config seeding if config.yaml missing
+python-dotenv    # Used ONLY for initial config seeding if config.yaml missing
 Jinja2
 python-multipart # For file uploads
-requests # For health checks or other potential uses
-PyYAML # For parsing presets.yaml AND primary config.yaml
+requests         # For health checks or other potential uses
+PyYAML           # For parsing presets.yaml AND primary config.yaml
 tqdm
 
 # Audio Post-processing
